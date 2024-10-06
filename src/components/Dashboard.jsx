@@ -1,16 +1,15 @@
+"use client";
 
-'use client'
-
-import { useState } from 'react'
-import Home from '../assets/icons8-home.svg'
-import Dashboard from '../assets/dashboard-white-icon.svg'
-import Profile from '../assets/user-icon-green.svg'
+import { useState } from "react";
+import Home from "../assets/icons8-home.svg";
+import Dashboard from "../assets/dashboard-white-icon.svg";
+import Profile from "../assets/user-icon-green.svg";
 import ForumIcon from "../assets/forum-icon.svg";
-import Directory from "../assets/directory-icon.svg"
-import Jobs from '../assets/job-icon.svg'
-import Event from '../assets/event-icon.svg';
-import Messages from '../assets/comment-Icon.svg'
-import Logout from '../assets/log-out-icon.svg'
+import Directory from "../assets/directory-icon.svg";
+import Jobs from "../assets/job-icon.svg";
+import Event from "../assets/event-icon.svg";
+import Messages from "../assets/comment-Icon.svg";
+import Logout from "../assets/log-out-icon.svg";
 import TeachForNigeria from "../assets/Teach-for-Nigeria-logo.svg";
 import { Outlet, useLocation, Link } from "react-router-dom";
 
@@ -23,55 +22,42 @@ import {
   MenuItem,
   MenuItems,
   TransitionChild,
-} from '@headlessui/react'
+} from "@headlessui/react";
 import {
   Bars3Icon,
   BellIcon,
-  CalendarIcon,
-  ChartPieIcon,
-  Cog6ToothIcon,
-  DocumentDuplicateIcon,
-  FolderIcon,
-  HomeIcon,
-  UsersIcon,
+  ChevronDownIcon,
+  MagnifyingGlassIcon,
   XMarkIcon,
-} from '@heroicons/react/24/outline'
-import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid'
+} from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name:'Home', href:'#', icon:Home, current :true},
-  { name: 'Dashboard', href: '#', icon: Dashboard, current: false },
-  { name: 'Profile', href: '#', icon: Profile, current: false },
-  { name: 'Forum', href: '#', icon: ForumIcon, current: false },
-  { name: 'Directory', href: '#', icon: Directory, current: false },
-  { name: 'Jobs', href: '#', icon: Jobs, current: false },
-  { name: 'Events', href: '#', icon: Event, current: false },
-  { name: 'Messages', href: '#', icon: Messages, current: false },
-  { name: 'Logout', href: '#', icon: Logout, current: false },
-]
+  { name: "Home", href: "/", icon: Home, current: true },
+  { name: "Dashboard", href: "/dashboard", icon: Dashboard, current: false },
+  { name: "Profile", href: "/profile", icon: Profile, current: false },
+  { name: "Forum", href: "/forum", icon: ForumIcon, current: false },
+  { name: "Directory", href: "/directory", icon: Directory, current: false },
+  { name: "Jobs", href: "/jobs", icon: Jobs, current: false },
+  { name: "Events", href: "/events", icon: Event, current: false },
+  { name: "Messages", href: "/messages", icon: Messages, current: false },
+  { name: "Logout", href: "/logout", icon: Logout, current: false },
+];
 
 const userNavigation = [
-  { name: 'Your profile', href: '#' },
-  { name: 'Sign out', href: '#' },
-]
+  { name: "Your profile", href: "/profile" },
+  { name: "Sign out", href: "/logout" },
+];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Example() {
-  const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const location = useLocation(); // Initialize location
 
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-white">
-        <body class="h-full">
-        ```
-      */}
       <div>
         <Dialog
           open={sidebarOpen}
@@ -103,7 +89,7 @@ export default function Example() {
                   </button>
                 </div>
               </TransitionChild>
-              {/* Sidebar component, swap this element with another sidebar if you like */}
+              {/* Sidebar component */}
               <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-[#006d3e] px-6 pb-4">
                 <div className="flex h-16 shrink-0 items-center">
                   <img
@@ -119,9 +105,9 @@ export default function Example() {
                         {navigation.map((item) => (
                           <li key={item.name}>
                             <Link
-                              href={item.href}
+                              to={item.href} // Changed from href to to
                               className={classNames(
-                                item.current
+                                location.pathname === item.href
                                   ? "bg-[#c7f084] text-white"
                                   : "text-[#006d3e] hover:bg-[#c7f084] hover:text-white",
                                 "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6"
@@ -130,7 +116,7 @@ export default function Example() {
                               <item.icon
                                 aria-hidden="true"
                                 className={classNames(
-                                  location.pathname.startsWith(item.href)
+                                  location.pathname === item.href
                                     ? "text-white"
                                     : "text-[#018847] group-hover:text-white",
                                   "h-6 w-6 shrink-0"
@@ -151,7 +137,7 @@ export default function Example() {
 
         {/* Static sidebar for desktop */}
         <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
-          {/* Sidebar component, swap this element with another sidebar if you like */}
+          {/* Sidebar component */}
           <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-[#006d3e] px-6 pb-4">
             <div className="flex h-16 shrink-0 items-center">
               <img
@@ -167,9 +153,9 @@ export default function Example() {
                     {navigation.map((item) => (
                       <li key={item.name}>
                         <Link
-                          to={item.href}
+                          to={item.href} // Ensure 'to' is used here
                           className={classNames(
-                            location.pathname.startsWith(item.href)
+                            location.pathname === item.href
                               ? "bg-[#c7f084] text-white"
                               : "text-indigo-200 hover:bg-[#006d3e] hover:text-white",
                             "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6"
@@ -178,7 +164,7 @@ export default function Example() {
                           <item.icon
                             aria-hidden="true"
                             className={classNames(
-                              item.current
+                              location.pathname === item.href
                                 ? "text-white"
                                 : "text-[#006d3e] group-hover:text-white",
                               "h-6 w-6 shrink-0"
@@ -272,12 +258,17 @@ export default function Example() {
                   >
                     {userNavigation.map((item) => (
                       <MenuItem key={item.name}>
-                        <a
-                          href={item.href}
-                          className="block px-3 py-1 text-sm leading-6 text-gray-900 data-[focus]:bg-gray-50"
-                        >
-                          {item.name}
-                        </a>
+                        {({ active }) => (
+                          <a
+                            href={item.href}
+                            className={classNames(
+                              active ? "bg-gray-50" : "",
+                              "block px-3 py-1 text-sm leading-6 text-gray-900"
+                            )}
+                          >
+                            {item.name}
+                          </a>
+                        )}
                       </MenuItem>
                     ))}
                   </MenuItems>

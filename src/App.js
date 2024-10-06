@@ -1,12 +1,14 @@
 // import './App.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Home from './pages/Home';
-import Login from './components/Login'
-import ResetPassword from './components/ResetPassword';
-import GeneralLayout from './GeneralLayout';
-import Profile from './components/Profile';
-import Dashboard from './components/Dashboard';
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./pages/Home";
+import Login from "./components/Login";
+import ResetPassword from "./components/ResetPassword";
+import GeneralLayout from "./GeneralLayout";
+import Profile from "./components/Profile";
+import Dashboard from "./components/Dashboard";
+import { PersonalDetailsProvider } from "./context/PersonalDetailsContext";
+import PersonalDetailsForm from "./components/PersonalDetailsForm";
+import NotFound from "./components/NotFound"
 
 function App() {
   const router = createBrowserRouter([
@@ -15,40 +17,42 @@ function App() {
       element: <Login />,
     },
     {
-      path: '/home',
-      element: <Home />
+      path: "/home",
+      element: <Home />,
     },
     {
-      path: '/reset-password',
-      element:<ResetPassword />
+      path: "/reset-password",
+      element: <ResetPassword />,
     },
     {
-      path: "dashboard",
+      path: "/dashboard",
       element: <GeneralLayout />,
       children: [
         {
-          index: true,
+          index: true, // This corresponds to /dashboard
           element: <Dashboard />,
         },
         {
-          path: "/dashboard/profile",
+          path: "profile", // This corresponds to /dashboard/profile
           element: <Profile />,
         },
-        
-        
+        {
+          path: "*",
+          element: <NotFound />, // Create a NotFound component
+        },
+        // You can add more nested routes here
       ],
     },
-    
-    
+    // You can add more top-level routes here
   ]);
 
   return (
-    <>
-      <RouterProvider router={router}/>
-
-    </>
-  )
+    <PersonalDetailsProvider>
+      <RouterProvider router={router}>
+        <PersonalDetailsForm />
+      </RouterProvider>
+    </PersonalDetailsProvider>
+  );
 }
 
-export default App
-
+export default App;
