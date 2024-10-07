@@ -6,9 +6,9 @@ import ResetPassword from "./components/ResetPassword";
 import GeneralLayout from "./GeneralLayout";
 import Profile from "./components/Profile";
 import Dashboard from "./components/Dashboard";
-import { PersonalDetailsProvider } from "./context/PersonalDetailsContext";
+import { PersonalDetailsProvider } from "./components/context/PersonalDetailsContext";
 import PersonalDetailsForm from "./components/PersonalDetailsForm";
-import NotFound from "./components/NotFound"
+import NotFound from "./components/NotFound";
 
 function App() {
   const router = createBrowserRouter([
@@ -25,11 +25,11 @@ function App() {
       element: <ResetPassword />,
     },
     {
-      path: "/dashboard",
+      // path: "/dashboard",
       element: <GeneralLayout />,
       children: [
         {
-          index: true, // This corresponds to /dashboard
+          path: "/dashboard", // This corresponds to /dashboard
           element: <Dashboard />,
         },
         {

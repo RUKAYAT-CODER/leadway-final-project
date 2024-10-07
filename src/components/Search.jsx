@@ -1,5 +1,5 @@
 import React from "react";
-import searchIcon from "../assets/icons/searchIcon.svg";
+import searchIcon from "../assets/search-icon.svg";
 
 function SearchFilterButton({
   searchTerm,
@@ -19,19 +19,13 @@ function SearchFilterButton({
           />
           <input
             type="text"
-            placeholder="Search Students"
+            placeholder="Search Here..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="border-none font-medium h-[20px] outline-none focus:ring-0 focus:outline-none placeholder:text-[11px] w-full text-[12px] text-gray-500"
+            className="border-none font-medium h-[22px] outline-none focus:ring-0 focus:outline-none placeholder:text-[11px] w-full text-[12px] text-gray-500"
           />
         </div>
 
-        <button
-          onClick={handleSearch}
-          className="bg-[#403294] px-[12px] rounded text-white outline-none h-[28px] text-[13px]"
-        >
-          Search
-        </button>
       </div>
 
       {isFiltered && (

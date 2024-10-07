@@ -1,8 +1,6 @@
-
 import LeftArrow from '../assets/arrow-left.svg'
-
 import React, { useContext } from "react";
-import PersonalDetailsContext from "./PersonalDetailsContext";
+import PersonalDetailsContext from "./context/PersonalDetailsContext"
 
 const PersonalDetailsForm = () => {
   const {

@@ -34,9 +34,10 @@ const Login = () => {
   };
 
   return (
-    <div className="flex flex-col w-full md:flex-row-reverse md:w-full md:h-screen gap-0">
-      <div className="bg-hero-pattern bg-no-repeat bg-cover h-80 p-5 rounded-2xl w-full md:w-[45%] gap-0 md:h-screen md:border-t-r-2 border-b-r-2 border-l-t-0 border-b-l-0 shadow-sm md:p-4 md:-ml-7">
-        <h1 className="text-white font-bold text-center text-4xl mb-6 md:mt-80">
+    <div className="flex flex-col w-full lg:flex-row-reverse lg:w-full lg:h-screen gap-0">
+      <div className="bg-hero-pattern bg-no-repeat bg-cover h-[400px] p-5 rounded-2xl w-full lg:w-[45%] gap-0 lg:h-screen lg:border-t-r-2 lg:border-b-r-2 lg:border-l-t-0 lg:border-b-l-0 lgshadow-sm lg:p-4 lg:-ml-7">
+        <img src={TeachForNigeria} alt="Logo" className="w-1/2 lg:-mt-40" />
+        <h1 className="text-white font-bold text-center text-4xl mb-6 mt-10  lg:mt-80">
           Welcome to the Community
         </h1>
         <p className="text-white font-bold text-center">
@@ -51,15 +52,14 @@ const Login = () => {
         onSubmit={handleSubmit}
       >
         {({ isSubmitting, touched, errors, setFieldValue }) => (
-          <Form className="p-4 flex flex-col gap-4 bg-[#F5F6FA] z-10 justify-center -mt-10 mx-4 rounded-lg md:w-[55%]">
-            <img src={TeachForNigeria} alt="Logo" className="-mt-40"/>
-            <h2 className="text-[#01884F] font-bold text-lg text-center py-6">
+          <Form className="p-4 flex flex-col gap-4 bg-[#F5F6FA] z-10 justify-center -mt-12 mx-4 rounded-xl h-full lg:w-[55%] lg:h-screen lg:-ml-10 lg:mt-0">
+            <h2 className="text-[#01884F] font-bold text-lg text-center py-6 lg:text-[24px]">
               Sign in to Dashboard
             </h2>
 
             {/* Email Input */}
             <FormInput
-              id="email" // Correct the id
+              id="email"
               label="Email Address"
               name="email"
               type="email"
@@ -77,7 +77,7 @@ const Login = () => {
                 name="password"
                 type="password"
                 onChange={(e) => handlePasswordChange(e, setFieldValue)}
-                className={`p-2 text-sm border-2 rounded shadow-md ${
+                className={`p-4 text-sm border-2 rounded-lg shadow-md ${
                   touched.password && errors.password
                     ? "border-red-500"
                     : "border-gray-300"
@@ -122,7 +122,7 @@ const Login = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="button bg-[#01884F] text-white text-bold py-2 rounded my-6"
+              className="button bg-[#01884F] text-white text-[18px] text-bold py-4 rounded-lg mt-7 mb-20"
               disabled={isSubmitting}
             >
               Submit
