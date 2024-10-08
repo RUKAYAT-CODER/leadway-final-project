@@ -22,9 +22,9 @@ const Navbar = () => {
             <div>
               <img src={User} alt="user" className='w-4 h-4 rounded-full' />
             </div>
-            <div className='flex flex-col gap-2 item-center'>
+            <div className='flex flex-col gap-1 item-center'>
               <p className="text-sm">Samuel Chibueze</p>
-              <div className='flex gap-2'>
+              <div className='flex gap-1'>
                 <span className='text-[#006d3e] text-[10px] '>Admin</span>
                 <img src={Downarrow} alt="down arrow" className='w-2' />
               </div>

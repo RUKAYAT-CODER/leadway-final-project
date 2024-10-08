@@ -12,7 +12,7 @@ const Sidebar = () => {
   }
   
   return (
-    <div className="bg-[#006d3e] w-40 px-4 inset-y-0 left-0 h-screen">
+    <div className="bg-[#006d3e] w-40 px-4 inset-y-0 left-0 h-full">
       <div className="pt-10">
         <img src={Logo} alt="logo" className=" border-b-[#c7f084]" />
       </div>

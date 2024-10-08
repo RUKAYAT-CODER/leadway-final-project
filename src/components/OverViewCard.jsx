@@ -1,17 +1,17 @@
 import React from "react";
 
-function OverViewCard({ image, headerText, text, backgroundColor }) {
+function OverViewCard({ image, headerText, text, backgroundColor, h2color, pcolor }) {
   return (
     <div>
       <div
-        className={`flex flex-col items-center w-full p-6 gap-5 rounded shadow bg-[${backgroundColor}]`}
+        className={`${backgroundColor} flex flex-col items-center justify-center w-full p-6 gap-5 rounded shadow`} 
       >
-        <div>
-          <img src={image} alt='user' width={40} />
+        <div className="flex items-center">
+          <img src={image} alt='user' width={45} />
         </div>
         <div>
-          <h2 className="text-[#172B4D] text-[36px] font-bold">{headerText}</h2>
-          <p className="text-[#172B4D] text-sm font-normal whitespace-nowrap">
+          <h2 className={`text-[${h2color}] text-[36px] font-bold text-center`}>{headerText}</h2>
+          <p className={`text-[${pcolor}] text-sm font-normal whitespace-nowrap `}>
             {text}
           </p>
         </div>

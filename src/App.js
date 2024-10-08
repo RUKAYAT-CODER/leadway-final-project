@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import Login from "./components/Login";
 import ResetPassword from "./components/ResetPassword";
 import GeneralLayout from "./GeneralLayout";
-import Profile from "./components/Profile";
+// import Profile from "./components/Profile";
 import Dashboard from "./components/Dashboard";
 import { PersonalDetailsProvider } from "./components/context/PersonalDetailsContext";
 import PersonalDetailsForm from "./components/PersonalDetailsForm";
@@ -34,7 +34,7 @@ function App() {
         },
         {
           path: "profile", // This corresponds to /dashboard/profile
-          element: <Profile />,
+          element: <PersonalDetailsForm />,
         },
         {
           path: "*",

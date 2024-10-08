@@ -123,7 +123,7 @@ const Login = () => {
             <button
               type="submit"
               className="button bg-[#01884F] text-white text-[18px] text-bold py-4 rounded-lg mt-7 mb-20"
-              disabled={isSubmitting}
+              disabled={isSubmitting} handleSubmit={handleSubmit}
             >
               Submit
             </button>

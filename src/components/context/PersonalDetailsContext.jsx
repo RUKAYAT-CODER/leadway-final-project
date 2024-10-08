@@ -3,21 +3,30 @@ import React, { createContext, useState } from 'react';
 const PersonalDetailsContext = createContext();
 
 export const PersonalDetailsProvider = ({ children }) => {
-  const [formData, setFormData] = useState({
-    username: '',
-    phoneNumber: '',
-    email: '',
-    gender: '',
-    aboutMe: '',
-    workEducation: '',
-    skills: ''
-  });
+  const bioData = {
+    username: "",
+    phoneNumber: "",
+    email: "",
+    gender: "",
+    aboutMe: "",
+    workEducation: "",
+    skills: "",
+    interest: "",
+    gaols: "",
+    twitter: "",
+    facebook: "",
+    linkdin: "",
+    instagram: "",
+    educationalbackground: "",
+  };
+  const [formData, setFormData] = useState(bioData);
 
   const [showSections, setShowSections] = useState({
     personalDetails: false,
     aboutMe: false,
     workEducation: false,
-    skills: false
+    skills: false,
+    socialmedia:false,
   });
 
   const toggleSection = (section) => {
@@ -31,13 +40,20 @@ export const PersonalDetailsProvider = ({ children }) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
+    
     }));
   };
 
   const handleSave = (section) => {
     localStorage.setItem(section, JSON.stringify(formData[section]));
     alert(`${section} details saved locally!`);
+    setFormData({
+      username: "",
+      phoneNumber: "",
+      email: "",
+      gender: "",
+    });
   };
 
   const handleFinish = () => {
