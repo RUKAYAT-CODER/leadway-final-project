@@ -6,7 +6,7 @@ import Timer from '../assets/clock-icon.svg'
 
 const EventsComponent = () => {
   return (
-    <div className="flex justify-between shadow-lg w-full mb-2 px-2 py-2">
+    <div className="flex items-center gap-2 shadow-lg w-full mb-2 px-2 py-2">
       <div className="mr-2">
         <img src={Poster} alt="poster" />
       </div>

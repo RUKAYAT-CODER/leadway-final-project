@@ -5,11 +5,12 @@ import Forum from '../assets/forum-icon.svg';
 import Logo from '../assets/Teach-for-Nigeria-logo.svg'
 
 const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen)
   }
+ 
   
   return (
     <div className="bg-[#006d3e] w-40 px-4 inset-y-0 left-0 h-full">

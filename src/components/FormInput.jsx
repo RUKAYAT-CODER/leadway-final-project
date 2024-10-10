@@ -20,7 +20,7 @@ const FormInput = ({
               id={name}
               type={type}
               {...field} // This spreads Formik's field props like value, onChange, onBlur
-              className={`p-4 text-sm border-2 rounded-lg shadow-md  ${
+              className={`px-4 py-5 text-sm border-2 rounded-lg shadow-md  ${
                 form.touched[name] && form.errors[name]
                   ? "border-red-500"
                   : "border-gray-300"

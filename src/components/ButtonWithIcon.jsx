@@ -1,8 +1,9 @@
-import React from "react";
+import React from 'react'
 
-function CreateNewButton({ children, backgroundColor, textColor }) {
+const ButtonWithIcon = ({ children, backgroundColor, textColor }) => {
   return (
     <div>
+      <img src="" alt="" />
       <button
         className={`px-[12px] py-[6px] text-[#ffffff] text-[${textColor}] ${backgroundColor} 
         rounded text-[13px] font-semibold `}
@@ -11,6 +12,6 @@ function CreateNewButton({ children, backgroundColor, textColor }) {
       </button>
     </div>
   );
-}
+};
 
-export default CreateNewButton;
+export default ButtonWithIcon

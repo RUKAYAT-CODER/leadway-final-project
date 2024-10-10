@@ -46,8 +46,9 @@ export const PersonalDetailsProvider = ({ children }) => {
   };
 
   const handleSave = (section) => {
-    localStorage.setItem(section, JSON.stringify(formData[section]));
+    localStorage.setItem(section, JSON.stringify(formData));
     alert(`${section} details saved locally!`);
+    console.log(formData)
     setFormData({
       username: "",
       phoneNumber: "",

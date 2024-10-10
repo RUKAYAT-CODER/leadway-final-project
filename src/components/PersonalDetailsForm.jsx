@@ -40,10 +40,10 @@ const PersonalDetailsForm = () => {
         {showSections.personalDetails && (
           <div>
             <div className="flex flex-col md:flex-row justify-between mb-4">
-              <div className="mb-2 md:mb-0 md:mr-4">
+              <div className="mb-2 md:mb-0 md:mr-4 ">
                 <label
                   htmlFor="username"
-                  className="flex items-center justify-between font-bold"
+                  className="flex items-center justify-between"
                 >
                   Username:
                 </label>
@@ -59,7 +59,7 @@ const PersonalDetailsForm = () => {
               <div>
                 <label
                   htmlFor="phoneNumber"
-                  className="flex items-center justify-between font-bold"
+                  className="flex items-center justify-between"
                 >
                   Phone Number:
                 </label>
@@ -77,7 +77,7 @@ const PersonalDetailsForm = () => {
               <div className="mb-2 md:mb-0 md:mr-4">
                 <label
                   htmlFor="email"
-                  className="flex items-center justify-between font-bold"
+                  className="flex items-center justify-between"
                 >
                   Email:
                 </label>
@@ -93,7 +93,7 @@ const PersonalDetailsForm = () => {
               <div>
                 <label
                   htmlFor="gender"
-                  className="flex items-center justify-between font-bold"
+                  className="flex items-center justify-between"
                 >
                   Gender:
                 </label>

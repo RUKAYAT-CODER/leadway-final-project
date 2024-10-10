@@ -28,7 +28,7 @@ const Dashboard = () => {
       <section className="flex justify-between">
         <h3 className="text-[20px] lg:text-[28px] font-bold m-3">Overview</h3>
 
-        <CreateNewButton backgroundColor={"#006d3e"} color={"#ffffff"}>
+        <CreateNewButton backgroundColor={"bg-[#006d3e]"} color={"#ffffff"}>
           Add Alumini
         </CreateNewButton>
       </section>
@@ -105,7 +105,7 @@ const Dashboard = () => {
         </div>
       </section>
 
-      <section className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-3 justify-between items-stretch">
+      <section className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-2 justify-between items-stretch">
         <div className="bg-white rounded-md p-3 shadow-lg">
           <div className="flex justify-end">
             <img src={Threedots} alt="three dot icon" className="w-6" />
@@ -137,7 +137,7 @@ const Dashboard = () => {
               so far
             </p>
             <div className="flex justify-between mb-3">
-              <CreateNewButton backgroundColor={"#006d3e"} color={"#ffffff"}>
+              <CreateNewButton backgroundColor={"bg-[#8a0832]"} color={"#ffffff"}>
                 High priority
               </CreateNewButton>
               <div className=" flex gap-2">
@@ -145,7 +145,8 @@ const Dashboard = () => {
                 <img src={Edit} alt="edit" className="w-4" />
               </div>
             </div>
-             <div className='w-full flex  '><CreateNewButton backgroundColor={'#006d3e'} textColor={'#ffffff'} >Add Task</CreateNewButton></div>
+            <div className='w-full flex'>
+              <button className='bg-[#006d3e] text-[14px] rounded-sm text-white w-full py-2'>Add Task</button></div>
           </div>
          
         </div>

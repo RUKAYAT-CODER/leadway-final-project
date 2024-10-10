@@ -52,9 +52,9 @@ const Login = () => {
         onSubmit={handleSubmit}
       >
         {({ isSubmitting, touched, errors, setFieldValue }) => (
-          <Form className="p-4 flex flex-col gap-4 bg-[#F5F6FA] z-10 justify-center -mt-12 mx-4 rounded-l-lg rounded-r-lg h-full lg:w-[55%] lg:p-5 lg:h-screen lg:-ml-12 lg:mt-0">
+          <Form className="p-4 flex flex-col gap-4 bg-[#F5F6FA] z-10 -mt-12 mx-4 rounded-l-lg rounded-r-lg h-full lg:w-[55%] lg:p-5 lg:h-screen lg:-ml-12 lg:mt-0">
             <img src={TeachForNigeria} alt="Logo" className="hidden lg:block lg:w-1/4  " />
-            <h2 className="text-[#01884F] font-bold text-lg text-center py-6 lg:text-[24px]">
+            <h2 className="text-[#01884F] font-bold text-lg text-center py-6 lg:text-[30px] lg:mt-48">
               Sign in to Dashboard
             </h2>
 
@@ -78,7 +78,7 @@ const Login = () => {
                 name="password"
                 type="password"
                 onChange={(e) => handlePasswordChange(e, setFieldValue)}
-                className={`p-4 text-sm border-2 rounded-lg shadow-md ${
+                className={`px-4 py-5 text-sm border-2 rounded-lg shadow-md ${
                   touched.password && errors.password
                     ? "border-red-500"
                     : "border-gray-300"
