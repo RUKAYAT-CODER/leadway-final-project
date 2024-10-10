@@ -4,7 +4,7 @@ function Button({ children, backgroundColor, textColor }) {
   return (
     <div>
       <button
-        className={`px-[12px] py-[6px] text-[#403294] text-[${textColor}] bg-[${backgroundColor}] 
+        className={`px-[12px] py-[6px] text-[${textColor}] bg-[${backgroundColor}] 
         rounded text-[13px] font-semibold `}
       >
         {children}

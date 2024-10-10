@@ -30,11 +30,7 @@ export const Users = () => {
       name: "Isah Faredah",
       title: "2018 Fellow",
     },
-    {
-      image: IsahSalmot,
-      name: "Hameed Salmot",
-      title: "2018 Fellow",
-    },
+  
     {
       image: IsahSalmot,
       name: "Hameed Salmot",
@@ -49,11 +45,11 @@ export const Users = () => {
   return (
     <div className="">
       {users.map((user, index) => (
-        <div key={index} className="flex my-2">
-          <img src={user.image} alt="user-img" className="" />
-          <div className='ml-2'>
-            <p className="text-[12px]">{user.name}</p>
-            <span className="text-[10px]">{user.title}</span>
+        <div key={index} className="flex items-center">
+          <img src={user.image} alt="user-img" className="pb-1" />
+          <div className=' flex flex-col items-center ml-2'>
+            <span className="text-[10px]">{user.name}</span>
+            <span className="text-[8px]">{user.title}</span>
           </div>
         </div>
       ))}

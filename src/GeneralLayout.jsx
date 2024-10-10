@@ -11,7 +11,7 @@ const GeneralLayout = () => {
       </div>
       <div className=" ">
         <Navbar />
-        <div className="overflow-y-ato">
+        <div className="overflow-y-auto">
           <Outlet />
         </div>
       </div>

@@ -53,6 +53,16 @@ export const PersonalDetailsProvider = ({ children }) => {
       phoneNumber: "",
       email: "",
       gender: "",
+      aboutMe: "",
+      workEducation: "",
+      skills: "",
+      interest: "",
+      gaols: "",
+      twitter: "",
+      facebook: "",
+      linkdin: "",
+      instagram: "",
+      educationalbackground: "",
     });
   };
 

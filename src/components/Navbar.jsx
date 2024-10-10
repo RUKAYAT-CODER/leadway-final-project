@@ -9,11 +9,11 @@ import Downarrow from '../assets/show-down-arrow.svg';
 const Navbar = () => {
   return (
   
-      <div className="flex justify-between bg-white h-[60px] shadow-sm items-center p-4">
+      <div className=" hidden lg:flex lg:justify-between lg:bg-white lg:h-[60px] lg:shadow lg:items-center lg:p-4">
           <Search />
 
         <div className='flex justify-end '>
-          <div className='flex gap-2 item-center'>
+          <div className='flex gap-2 items-center'>
             <div className='mr-2'><img src={Settings} alt="settings" className='w-4' /></div>
             <div className='mr-2'><img src={Notification} alt="notifications" className='w-4' /></div>
             <div className='mr-2'><img src={Message} alt="messages" className='w-4'/></div>
@@ -22,10 +22,10 @@ const Navbar = () => {
             <div>
               <img src={User} alt="user" className='w-4 h-4 rounded-full' />
             </div>
-            <div className='flex flex-col gap-1 item-center'>
-              <p className="text-sm">Samuel Chibueze</p>
+            <div className='flex flex-col gap-1 items-center'>
+              <p className="text-[10px]">Samuel Chibueze</p>
               <div className='flex gap-1'>
-                <span className='text-[#006d3e] text-[10px] '>Admin</span>
+                <span className='text-[#006d3e] text-[8px] '>Admin</span>
                 <img src={Downarrow} alt="down arrow" className='w-2' />
               </div>
             </div>

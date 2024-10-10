@@ -7,7 +7,7 @@ function OverViewCard({ image, headerText, text, backgroundColor, h2color, pcolo
         className={`${backgroundColor} flex flex-col items-center justify-center w-full p-6 gap-5 rounded shadow`} 
       >
         <div className="flex items-center">
-          <img src={image} alt='user' width={45} />
+          <img src={image} alt='user' width={40} />
         </div>
         <div>
           <h2 className={`text-[${h2color}] text-[36px] font-bold text-center`}>{headerText}</h2>

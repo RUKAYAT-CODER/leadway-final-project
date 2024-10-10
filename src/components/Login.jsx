@@ -35,7 +35,7 @@ const Login = () => {
 
   return (
     <div className="flex flex-col w-full lg:flex-row-reverse lg:w-full lg:h-screen gap-0">
-      <div className="bg-hero-pattern bg-no-repeat bg-cover h-[400px] p-5 rounded-2xl w-full lg:w-[45%] gap-0 lg:h-screen lg:border-t-r-2 lg:border-b-r-2 lg:border-l-t-0 lg:border-b-l-0 lgshadow-sm lg:p-4 lg:-ml-7">
+      <div className="bg-hero-pattern bg-no-repeat bg-cover h-[400px] p-5 rounded-2xl w-full lg:w-[45%] gap-0 lg:h-screen lg:border-t-r-2 lg:border-b-r-2 lg:border-l-t-0 lg:border-b-l-0 lg:shadow-sm lg:p-4 lg:-ml-4">
         <img src={TeachForNigeria} alt="Logo" className="w-1/2 lg:-mt-40" />
         <h1 className="text-white font-bold text-center text-4xl mb-6 mt-10  lg:mt-80">
           Welcome to the Community
@@ -52,7 +52,8 @@ const Login = () => {
         onSubmit={handleSubmit}
       >
         {({ isSubmitting, touched, errors, setFieldValue }) => (
-          <Form className="p-4 flex flex-col gap-4 bg-[#F5F6FA] z-10 justify-center -mt-12 mx-4 rounded-xl h-full lg:w-[55%] lg:h-screen lg:-ml-10 lg:mt-0">
+          <Form className="p-4 flex flex-col gap-4 bg-[#F5F6FA] z-10 justify-center -mt-12 mx-4 rounded-l-lg rounded-r-lg h-full lg:w-[55%] lg:p-5 lg:h-screen lg:-ml-12 lg:mt-0">
+            <img src={TeachForNigeria} alt="Logo" className="hidden lg:block lg:w-1/4  " />
             <h2 className="text-[#01884F] font-bold text-lg text-center py-6 lg:text-[24px]">
               Sign in to Dashboard
             </h2>
@@ -88,7 +89,7 @@ const Login = () => {
               )}
 
               {/* Password Strength Indicator - Single Color */}
-              <div className="flex space-x-2 mt-1">
+              <div className="flex space-x-2 mt-2">
                 {[1, 2, 3, 4].map((i) => (
                   <div
                     key={i}
@@ -123,7 +124,8 @@ const Login = () => {
             <button
               type="submit"
               className="button bg-[#01884F] text-white text-[18px] text-bold py-4 rounded-lg mt-7 mb-20"
-              disabled={isSubmitting} handleSubmit={handleSubmit}
+              disabled={isSubmitting}
+              handleSubmit={handleSubmit}
             >
               Submit
             </button>
