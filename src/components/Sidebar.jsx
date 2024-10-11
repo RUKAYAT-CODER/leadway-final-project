@@ -1,42 +1,95 @@
-import React, {useState} from 'react'
-import {NavLink} from 'react-router-dom'
 import Home from '../assets/icons8-home.svg'
 import Forum from '../assets/forum-icon.svg';
 import Logo from '../assets/Teach-for-Nigeria-logo.svg'
+import React, { useState } from 'react';
+import { IoMdClose, IoMdMenu } from 'react-icons/io';
+import { NavLink } from 'react-router-dom';
 
-const Sidebar = () => {
+function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleSidebar = () => {
-    setIsOpen(!isOpen)
-  }
- 
-  
+    setIsOpen(!isOpen);
+  };
+
+  const top_links = [
+    { label: 'Dashboard', to: '/dashboard', icon: <IoMdMenu /> },
+    { label: 'Expense', to: '/expense', icon: <IoMdMenu /> },
+    { label: 'Bank accounts', to: '/bank-accounts', icon: <IoMdMenu /> },
+    { label: 'Configuration', to: '/configuration', icon: <IoMdMenu /> },
+  ];
+
+  const bottom_links = [
+    { label: 'Settings', to: '/settings', icon: <IoMdMenu /> },
+    { label: 'Log out', to: '/logout', icon: <IoMdMenu /> },
+  ];
+
   return (
-    <div className="bg-[#006d3e] w-40 px-4 inset-y-0 left-0 h-full">
-      <div className="pt-10">
-        <img src={Logo} alt="logo" className=" border-b-[#c7f084]" />
-      </div>
-      <div
-        className={` transform ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        } transition-transform duration-300 ease-in-out bg-[#017b47] text-white w-30 rounded-lg my-10 h-1/2`}
+    <div>
+      <button
+        onClick={toggleSidebar}
+        className="lg:hidden p-2 focus:outline-none fixed top-4 left-4 z-50"
       >
-        <span onClick={toggleSidebar} className="absolute top-4 right-4">
-          <img src="" alt="" />
-        </span>
-        <nav className="mt-5">
-          <NavLink
-            to="/home"
-            className="block py-2.5 px-4 rounded transition duration-200 hover:bg-[#018847 flex items-center"
-            activeClassName="bg-[#765555]"
+        {isOpen ? <IoMdClose className="h-6 w-6" /> : <IoMdMenu className="h-6 w-6" />}
+      </button>
+
+      <div
+        className={`fixed inset-y-0 left-0 w-52 bg-white shadow-md transform transition-transform duration-300 lg:translate-x-0 flex flex-col ${
+          isOpen ? 'translate-x-0' : '-translate-x-full'
+        } z-40`}
+      >
+        <div className="p-4 flex flex-col font-codec-pro h-full">
+          <button
+            onClick={toggleSidebar}
+            className="lg:hidden p-2 focus:outline-none absolute top-4 right-4"
           >
-            <img src={Home} alt="home" className="mr-3" /> Home
-          </NavLink>
-        </nav>
+            <IoMdClose className="h-6 w-6" />
+          </button>
+          <div className="flex items-center mb-8">
+            <h2 className="font-zendots text-center mt-2 text-black text-base lg:text-base">
+              Expense <span className="text-[#0557C2]">Padi</span>
+            </h2>
+          </div>
+          <hr />
+          <nav className="space-y-3 mt-4">
+            {top_links.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                className={({ isActive }) =>
+                  isActive
+                    ? 'flex items-center space-x-3 text-white bg-[#0553C7] p-2 rounded-md'
+                    : 'flex items-center space-x-3 text-[#B0B0B0] p-2 hover:bg-[#F0F6FE] rounded-md'
+                }
+              >
+                {link.icon}
+                <span className="text-sm">{link.label}</span>
+              </NavLink>
+            ))}
+          </nav>
+          <div className="mt-auto">
+            <hr />
+            <nav className="space-y-4 mt-2">
+              {bottom_links.map((link) => (
+                <NavLink
+                  key={link.to}
+                  to={link.to}
+                  className={({ isActive }) =>
+                    isActive
+                      ? 'flex items-center space-x-3 text-white bg-[#0553C7] p-2 rounded-md'
+                      : 'flex items-center space-x-3 text-[#B0B0B0] p-2 hover:bg-[#F0F6FE] rounded-md'
+                  }
+                >
+                  {link.icon}
+                  <span className="font-medium text-sm">{link.label}</span>
+                </NavLink>
+              ))}
+            </nav>
+          </div>
+        </div>
       </div>
     </div>
   );
 }
 
-export default Sidebar
+export default Sidebar;

@@ -2,10 +2,10 @@ import React from 'react'
 import Search from './Search'
 import Settings from '../assets/setting.svg'
 import Notification from '../assets/notification.svg'
-import Message from '../assets/icon_message.svg';
+import Message from '../assets/iconMessage.svg';
 import User from '../assets/admin-samuel.svg';
 import Downarrow from '../assets/show-down-arrow.svg';
-import Hamburger from '../assets/hamburger.svg'
+// import Hamburger from '../assets/hamburger.svg'
 
 const Navbar = () => {
   return (
@@ -14,9 +14,9 @@ const Navbar = () => {
 
       <div className="flex justify-end ">
         <div className="flex gap-2 items-center justify-between">
-          <div>
+          {/* <div>
             <img src={Hamburger} alt="hamburger-menu" />
-          </div>
+          </div> */}
           <div className="mr-2">
             <img src={Settings} alt="settings" className="" />
           </div>
