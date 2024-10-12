@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import TeachForNigeria from "../assets/Teach-for-Nigeria-logo.svg";
 import { GetStrengthColor } from "../utilities/GetStrengthColor";
 
-const Login = () => {
+const Siinup = () => {
   const navigate = useNavigate();
   const [passwordStrength, setPasswordStrength] = useState(0);
 
@@ -136,7 +136,7 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;
 
 
 

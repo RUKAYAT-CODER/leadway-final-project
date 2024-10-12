@@ -5,13 +5,13 @@ import { Outlet } from "react-router-dom";
 
 const GeneralLayout = () => {
   return (
-    <div className="grid grid-cols-[160px_1fr] h-screen">
-      <div>
+    <div className="w-full min-h-screen flex">
+      <div className="hidden w-[192px] h-screen fixed md:flex flex-col">
         <Sidebar />
       </div>
-      <div className=" ">
+      <div className="flex flex-col lg:ml-[192px] w-full">
         <Navbar />
-        <div className="overflow-y-auto">
+        <div className="overflow-y-auto px-3 ">
           <Outlet />
         </div>
       </div>

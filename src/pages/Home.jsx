@@ -14,7 +14,7 @@ import { useNavigate, Link } from 'react-router-dom'
 const Home = () => {
   const navigate = useNavigate()
   const handleNavigate = () => {
-    navigate('/dashboard')
+    navigate('/login')
   }
   return (
     <div className="w-full">
@@ -28,9 +28,9 @@ const Home = () => {
           </p>
         </div>
         <nav className="flex items-center justify-between space-x-4">
-          <a href="#">About Us</a>
-          <a href="#">Connect with the Community</a>
-          <a href="#">Go to Dashboard</a>
+          <a href="#" className='text-14px'>About Us</a>
+          <a href="#" className='text-14px'>Connect with the Community</a>
+          <a href="#" className='text-14px'>Go to Dashboard</a>
         </nav>
         <div className="flex items-center justify-between gap-2">
           <img src={UserIcon} alt="icon user" className="w-[30px]" />
@@ -102,7 +102,7 @@ const Home = () => {
                 <span className="text-black my-4">Read More</span>
               </p>
               <div className="flex gap-2">
-                <p cl>More News</p>
+                <p>More News</p>
                 <img src={LongArrow} alt="aroow left " className="w-6" />
               </div>
             </div>

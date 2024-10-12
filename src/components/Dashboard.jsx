@@ -119,6 +119,9 @@ const Dashboard = () => {
           <div className="border-b-4">
             <EventsComponent />
           </div>
+          <div className="border-b-4">
+            <EventsComponent />
+          </div>
         </div>
         <div className="flex flex-col gap-3">
           <div className="bg-white rounded-md p-3 border">
@@ -137,7 +140,10 @@ const Dashboard = () => {
               so far
             </p>
             <div className="flex justify-between mb-3">
-              <CreateNewButton backgroundColor={"bg-[#8a0832]"} color={"#ffffff"}>
+              <CreateNewButton
+                backgroundColor={"bg-[#8a0832]"}
+                color={"#ffffff"}
+              >
                 High priority
               </CreateNewButton>
               <div className=" flex gap-2">
@@ -145,14 +151,14 @@ const Dashboard = () => {
                 <img src={Edit} alt="edit" className="w-4" />
               </div>
             </div>
-            <div className='w-full flex'>
-              <button className='bg-[#006d3e] text-[14px] rounded-sm text-white w-full py-2'>Add Task</button></div>
+            <div className="w-full flex">
+              <button className="bg-[#006d3e] text-[14px] rounded-sm text-white w-full py-2">
+                Add Task
+              </button>
+            </div>
           </div>
-         
         </div>
       </section>
-
-      
     </div>
   );
 }

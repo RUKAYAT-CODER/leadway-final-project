@@ -1,25 +1,27 @@
 // import './App.css';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
+import Directory from "./pages/Directory";
 import Login from "./components/Login";
 import ResetPassword from "./components/ResetPassword";
 import GeneralLayout from "./GeneralLayout";
-// import Profile from "./components/Profile";
 import Dashboard from "./components/Dashboard";
 import { PersonalDetailsProvider } from "./components/context/PersonalDetailsContext";
 import PersonalDetailsForm from "./components/PersonalDetailsForm";
 import NotFound from "./components/NotFound";
+import ProfilePage from "./components/ProfilePage";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Login />,
-    },
-    {
-      path: "/home",
       element: <Home />,
     },
+    {
+      path: "/login",
+      element: <Login />,
+    },
+
     {
       path: "/reset-password",
       element: <ResetPassword />,
@@ -35,6 +37,14 @@ function App() {
         {
           path: "profile", // This corresponds to /dashboard/profile
           element: <PersonalDetailsForm />,
+        },
+        {
+          path: "/directory",
+          element: <Directory />,
+        },
+        {
+          path: "/directory/profilePage/:userId",
+          element: <ProfilePage />,
         },
         {
           path: "*",
