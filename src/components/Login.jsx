@@ -35,9 +35,9 @@ const Login = () => {
 
   return (
     <div className="flex flex-col w-full lg:flex-row-reverse lg:w-full lg:h-screen gap-0">
-      <div className="bg-hero-pattern bg-no-repeat bg-cover h-[400px] p-5 rounded-2xl w-full md:h-[500px] lg:w-[45%] gap-0 lg:h-full lg:border-t-r-2 lg:border-b-r-2 lg:border-l-t-0 lg:border-b-l-0 lg:shadow-sm lg:p-4 lg:-ml-4">
+      <div className="bg-hero-pattern bg-no-repeat bg-cover h-[400px] p-5 rounded-2xl w-full md:h-[500px] lg:w-[45%] gap-0 lg:h-screen lg:border-t-r-2 lg:border-b-r-2 lg:border-l-t-0 lg:border-b-l-0 lg:shadow-sm lg:p-4 lg:-ml-4">
         <img src={TeachForNigeria} alt="Logo" className="w-1/2 lg:-mt-40" />
-        <h1 className="text-white font-bold text-center text-4xl mb-7 mt-10  lg:mt-96 lg:text-7xl">
+        <h1 className="text-white font-bold text-center text-4xl mb-7 mt-10  lg:mt-96 lg:text-5xl">
           Welcome to the Community
         </h1>
         <p className="text-white font-bold text-center">
@@ -52,9 +52,9 @@ const Login = () => {
         onSubmit={handleSubmit}
       >
         {({ isSubmitting, touched, errors, setFieldValue }) => (
-          <Form className="p-4 flex flex-col gap-4 bg-[#F5F6FA] z-10 -mt-12 mx-4 rounded-l-lg rounded-r-lg h-full lg:w-[55%] md:h-[700px]  md:-mt-20 lg:p-5 lg:h-full lg:-ml-12 lg:mt-0">
+          <Form className="p-4 flex flex-col gap-4 bg-[#F5F6FA] z-10 -mt-12 mx-4 rounded-l-lg rounded-r-lg h-full lg:w-[55%] md:h-[700px]  md:-mt-20 lg:p-5 lg:h-screen lg:-ml-12 lg:mt-0">
             <img src={TeachForNigeria} alt="Logo" className="hidden lg:block lg:w-1/4  " />
-            <h2 className="text-[#01884F] font-bold text-lg text-center py-6 lg:text-[30px] lg:mt-40">
+            <h2 className="text-[#01884F] font-bold text-lg text-center py-6 lg:text-[30px] lg:mt-24">
               Sign in to Dashboard
             </h2>
 

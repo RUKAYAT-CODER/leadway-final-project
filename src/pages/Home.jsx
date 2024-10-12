@@ -23,11 +23,11 @@ const Home = () => {
           <div className="">
             <img src={Logo} alt="logo" className="" />
           </div>
-          <p className="text-[24px] border-t-2 border-x-gray-950 ">
+          <p className=" text-[18px] md:text-[18px] border-t-2 border-x-gray-950 ">
             Alumini Portal
           </p>
         </div>
-        <nav className="flex items-center justify-between space-x-4">
+        <nav className=" hidden lg:inline-flex lg:items-center lg:justify-between lg:space-x-4">
           <a href="#" className='text-14px'>About Us</a>
           <a href="#" className='text-14px'>Connect with the Community</a>
           <a href="#" className='text-14px'>Go to Dashboard</a>
@@ -38,11 +38,11 @@ const Home = () => {
         </div>
       </div>
       <div className=" mx-auto max-w-[1080px] px-5 py-4 flex flex-col items-center">
-        <h3 className="text-[40px] font-bold">Looking for the Next </h3>
-        <span className="text-[#006d3e] font-bold text-[40px] py-2">
+        <h3 className=" text-[24px] lg:text-[40px] font-bold">Looking for the Next </h3>
+        <span className="text-[24px] text-[#006d3e] font-bold lg:text-[40px] py-2">
           Opportunity?
         </span>
-        <p className="my-3 text-[#717171] text-[18px] mb-3">
+        <p className="my-3 text-[#717171] text-[16px] lg:text-[18px] mb-3">
           Teach for Nigeria continue to provide opportunities, events, resources
           and leadership development
         </p>
@@ -65,7 +65,7 @@ const Home = () => {
         </div>
       </div>
       <section className="bg-[#f5f5f9] mx-auto max-w-[1080px] px-5 py-10 flex flex-col items-center">
-        <h3 className="text-[30px] text-[#1c1b1f] mb-3">
+        <h3 className=" text-[20px] font-bold lg:text-[30px] text-[#1c1b1f] mb-3">
           TFN Alumni Impact Stories
         </h3>
         <p className="text-[#484649] mb-4">

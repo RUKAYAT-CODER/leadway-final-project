@@ -96,13 +96,13 @@ export const ProfilePage = () => {
   
   return (
     <div className="">
-      <div className='flex flex-col gap-2 max-w-[500px] bg-slate-800 text-white'>
-        <h1>Welcome !</h1>
-        <div>{ user.image}</div>
-        <h1>{user.name}</h1>
-        <p>{user.title}</p>
-        <p>{user.email}</p>
-        <p>{user.address}</p>
+      <div className='flex flex-col mx-auto items-center justify-center mt-4 gap-2 max-w-[500px] bg-lime-800 drop-shadow-md rounded text-white'>
+        <h1 classname='font-bold text-[36px] m-4'>Welcome ! {user.name}</h1>
+        <div>{user.image}</div>
+        <h1 className='font-bold text-[20px] m-3'>Name: {user.name}</h1>
+        <p className='font-bold'>Title: {user.title}</p>
+        <p className='font-bold m-2'>Email: {user.email}</p>
+        <p className='font-bold mb-4'>Address: {user.address}</p>
       </div>
     </div>
   );

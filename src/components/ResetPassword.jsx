@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
-import GetPasswordStrength from "../utilities/GetPasswordStrength";
+
 import FormInput from "./FormInput"; // Assuming this is the path
 import { Link, useNavigate } from "react-router-dom";
 import TeachForNigeria from "../assets/Teach-for-Nigeria-logo.svg";
-import LeftArrow from "../assets/long-arrow-green.svg"
-import { GetStrengthColor } from "../utilities/GetStrengthColor";
+import LeftArrow from "../assets/arrow-left.svg";
 
 const ResetPassword = () => {
   const navigate = useNavigate();
-  const [passwordStrength, setPasswordStrength] = useState(0);
+  
 
   // Validation schema using Yup
   const validationSchema = Yup.object({
@@ -22,7 +21,7 @@ const ResetPassword = () => {
 
   // Submit handler
   const handleSubmit = (values, { setSubmitting, resetForm }) => {
-    navigate("/home"); // Navigate to the home page after submission
+    navigate("/dashboard"); // Navigate to the home page after submission
     setSubmitting(false);
     resetForm();
   };
@@ -30,66 +29,68 @@ const ResetPassword = () => {
   const handlePasswordChange = (e, setFieldValue) => {
     const { value } = e.target;
     setFieldValue("password", value);
-    const strength = GetPasswordStrength(value);
-    setPasswordStrength(strength);
+    
   };
 
   return (
-    <div>
-      <div className="flex flex-col w-full md:flex-row-reverse md:w-full md:h-screen gap-0">
-        <div className="bg-hero-pattern bg-no-repeat bg-cover h-80 p-5 rounded-2xl w-full md:w-[45%] gap-0 md:h-screen md:border-t-r-2 border-b-r-2 border-l-t-0 border-b-l-0 shadow-sm md:p-4 md:-ml-7">
-          <h1 className="text-white font-bold text-center text-4xl mb-6 md:mt-40">
-            Welcome to the Community
-          </h1>
-          <p className="text-white font-bold text-center">
-            Be inspired by Creatives Around the Globe
-          </p>
-        </div>
-
-        {/* Formik Wrapper */}
-        <Formik
-          initialValues={{ email: "", password: "", rememberMe: false }}
-          validationSchema={validationSchema}
-          onSubmit={handleSubmit}
-        >
-          {({ isSubmitting, touched, errors, setFieldValue }) => (
-            <Form className="p-4 flex flex-col gap-4 bg-[#F5F6FA] z-10 justify-center -mt-10 mx-4 rounded-lg md:w-[55%]">
-              <img src={TeachForNigeria} alt="Logo" className="-mt-40" />
-              <h2 className="text-[#01884F] font-bold text-lg text-center py-6">
-                Sign in to Dashboard
-              </h2>
-
-              {/* Email Input */}
-              <FormInput
-                id="email" // Correct the id
-                label="Email Address"
-                name="email"
-                type="email"
-                touched={touched.email}
-                error={errors.email}
-              />
-
-              {/* Submit Button */}
-              <button
-                type="submit"
-                className="button bg-[#01884F] text-white text-bold py-2 rounded my-6"
-                disabled={isSubmitting}
-              >
-                Reset Password
-              </button>
-            </Form>
-          )}
-        </Formik>
+    <div className="flex flex-col w-full lg:flex-row-reverse lg:w-full lg:h-screen gap-0">
+      <div className="bg-hero-pattern bg-no-repeat bg-cover h-[400px] p-5 rounded-2xl w-full md:h-[500px] lg:w-[45%] gap-0 lg:h-screen lg:border-t-r-2 lg:border-b-r-2 lg:border-l-t-0 lg:border-b-l-0 lg:shadow-sm lg:p-4 lg:-ml-4">
+        <img src={TeachForNigeria} alt="Logo" className="w-1/2 lg:-mt-40" />
+        <h1 className="text-white font-bold text-center text-4xl mb-7 mt-10  lg:mt-96 lg:text-5xl">
+          Welcome to the Community
+        </h1>
+        <p className="text-white font-bold text-center">
+          Be inspired by Creatives Around the Globe
+        </p>
       </div>
+
+      {/* Formik Wrapper */}
+      <Formik
+        initialValues={{ email: "", password: "", rememberMe: false }}
+        validationSchema={validationSchema}
+        onSubmit={handleSubmit}
+      >
+        {({ isSubmitting, touched, errors, setFieldValue }) => (
+          <Form className="p-4 flex flex-col gap-4 bg-[#F5F6FA] z-10 -mt-12 mx-4 rounded-l-lg rounded-r-lg h-full lg:w-[55%] md:h-[700px]  md:-mt-20 lg:p-5 lg:h-screen lg:-ml-12 lg:mt-0">
+            <img src={TeachForNigeria} alt="Logo" className="hidden lg:block lg:w-1/4  " />
+            <h2 className="text-[#01884F] font-bold text-lg text-center py-6 lg:text-[30px] lg:mt-24">
+              Sign in to Dashboard
+            </h2>
+
+            {/* Email Input */}
+            <FormInput
+              id="email"
+              label="Email Address"
+              name="email"
+              type="email"
+              touched={touched.email}
+              error={errors.email}
+            />
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              className="button bg-[#01884F] text-white text-[18px] text-bold py-4 rounded-lg mt-7 mb-20"
+              disabled={isSubmitting}
+              handleSubmit={handleSubmit}
+            >
+            Reset Password
+            </button>
+          </Form>
+        )}
+      </Formik>
       <div className="absolute bottom-20 left-20 z-40 flex">
-        <img src={LeftArrow} alt="back arrow" />
+        <img src={LeftArrow} alt="back arrow"  className="w-5 h-6 mr-5"/>
         <Link to="/reset-password" className="text-[#01884f]">
           Back to sign in
         </Link>
       </div>
     </div>
+    
+
   );
 };
+
 
 export default ResetPassword;
 

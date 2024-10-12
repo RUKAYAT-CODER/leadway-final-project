@@ -35,7 +35,7 @@ function App() {
           element: <Dashboard />,
         },
         {
-          path: "profile", // This corresponds to /dashboard/profile
+          path: "personalDetails", // This corresponds to /dashboard/profile
           element: <PersonalDetailsForm />,
         },
         {
