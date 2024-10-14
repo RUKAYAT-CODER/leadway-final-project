@@ -22,7 +22,7 @@ const Dashboard = () => {
   return (
     <div className="">
       <div className=" my-4">
-        <h3 className="bg-[#eeffd2] rounded-lg text-[#476806] p-1 m-3 w-[380px]">
+        <h3 className="bg-[#eeffd2] rounded-lg text-[#476806] p-1 m-3 w-[360px] lg:w-[380px] text-[12px] lg:text-[16px] font-bold">
           Welcome to Teach for Nigeria Alumini Dashboard!
         </h3>
       </div>

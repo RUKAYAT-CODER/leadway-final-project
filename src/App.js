@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import Directory from "./pages/Directory";
 import Login from "./components/Login";
-import ResetPassword from "./components/ResetPassword";
+import PasswordReset from "./components/PasswordReset";
 import GeneralLayout from "./GeneralLayout";
 import Dashboard from "./components/Dashboard";
 import NewDashboard from "./components/NewDashboard";
@@ -13,6 +13,7 @@ import NotFound from "./components/NotFound";
 import ProfilePage from "./components/ProfilePage";
 import Jobs from "./components/Jobs";
 import Events from "./components/Events";
+import ForgotPassword from "./components/ForgotPassword";
 
 function App() {
   const router = createBrowserRouter([
@@ -26,8 +27,12 @@ function App() {
     },
 
     {
-      path: "/reset-password",
-      element: <ResetPassword />,
+      path: "/forgot-password",
+      element: <ForgotPassword />,
+    },
+    {
+      path: "/password-reset",
+      element: <PasswordReset />,
     },
     {
       element: <GeneralLayout />,

@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import TeachForNigeria from "../assets/Teach-for-Nigeria-logo.svg";
 import LeftArrow from "../assets/arrow-left.svg";
 
-const ResetPassword = () => {
+const ForgotPassword = () => {
   const navigate = useNavigate();
   
 
@@ -54,7 +54,7 @@ const ResetPassword = () => {
           <Form className="p-4 flex flex-col gap-4 bg-[#F5F6FA] z-10 -mt-12 mx-4 rounded-l-lg rounded-r-lg h-full lg:w-[55%] md:h-[700px]  md:-mt-20 lg:p-5 lg:h-screen lg:-ml-12 lg:mt-0">
             <img src={TeachForNigeria} alt="Logo" className="hidden lg:block lg:w-1/4  " />
             <h2 className="text-[#01884F] font-bold text-lg text-center py-6 lg:text-[30px] lg:mt-24">
-              Sign in to Dashboard
+              Forgot Password
             </h2>
 
             {/* Email Input */}
@@ -80,8 +80,8 @@ const ResetPassword = () => {
         )}
       </Formik>
       <div className="absolute bottom-20 left-20 z-40 flex">
-        <img src={LeftArrow} alt="back arrow"  className="w-5 h-6 mr-5"/>
-        <Link to="/reset-password" className="text-[#01884f]">
+        <img src={LeftArrow} alt="back arrow"  className="w-4 h-4 mr-5"/>
+        <Link to="/login" className="text-[#01884f]">
           Back to sign in
         </Link>
       </div>
@@ -92,7 +92,7 @@ const ResetPassword = () => {
 };
 
 
-export default ResetPassword;
+export default ForgotPassword;
 
 
 
