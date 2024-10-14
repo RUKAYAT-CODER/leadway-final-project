@@ -15,7 +15,7 @@ import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
   const navigate = useNavigate();
-  const handledashboardCreation = () => {
+  const handleNavigate = () => {
     navigate("/NewDashboard");
   };
 
@@ -30,13 +30,12 @@ const Dashboard = () => {
       <section className="flex justify-between">
         <h3 className="text-[20px] lg:text-[28px] font-bold m-3">Overview</h3>
 
-        <CreateNewButton
-          onClick={handledashboardCreation}
-          backgroundColor={"bg-[#006d3e]"}
-          color={"#ffffff"}
-        >
+        <button
+          onClick={handleNavigate}
+          className="bg-[#006d3e] text-[#ffffff] px-[12px] py-[6px] cursor-pointer
+        rounded text-[13px] font-semibold ">
           + Add Alumini
-        </CreateNewButton>
+        </button>
       </section>
 
       {/* card section */}
