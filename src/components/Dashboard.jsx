@@ -1,21 +1,23 @@
-import React from 'react'
-import CreateNewButton from '../components/CreateNewButton'
-import OverViewCard from '../components/OverViewCard';
+import React from "react";
+import CreateNewButton from "../components/CreateNewButton";
+import OverViewCard from "../components/OverViewCard";
 import userGreen from "../assets/user-icon-green.svg";
 import Delete from "../assets/delete.svg";
 import Edit from "../assets/edit_square.svg";
-import Comments from "../assets/comments.svg";
-import userCyan from "../assets/user-icon-on card-cyan.svg"
-import PostCard from '../components/PostCard'
-import ThreeDots from '../assets/three-dot-icon.svg'
-import Users from '../pages/user/Users';
-import EventsComponent from '../components/EventsComponent'
-import CalendarUi from '../ui/CalendarUi';
+import userCyan from "../assets/user-icon-on card-cyan.svg";
+import PostCard from "../components/PostCard";
+import ThreeDots from "../assets/three-dot-icon.svg";
+import Users from "../pages/user/Users";
+import EventsComponent from "../components/EventsComponent";
+import CalendarUi from "../ui/CalendarUi";
 import Threedots from "../assets/three-dot-icon.svg";
-
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
-
+  const navigate = useNavigate();
+  const handledashboardCreation = () => {
+    navigate("/NewDashboard");
+  };
 
   return (
     <div className="">
@@ -28,8 +30,12 @@ const Dashboard = () => {
       <section className="flex justify-between">
         <h3 className="text-[20px] lg:text-[28px] font-bold m-3">Overview</h3>
 
-        <CreateNewButton backgroundColor={"bg-[#006d3e]"} color={"#ffffff"}>
-          Add Alumini
+        <CreateNewButton
+          onClick={handledashboardCreation}
+          backgroundColor={"bg-[#006d3e]"}
+          color={"#ffffff"}
+        >
+          + Add Alumini
         </CreateNewButton>
       </section>
 
@@ -161,5 +167,5 @@ const Dashboard = () => {
       </section>
     </div>
   );
-}
-export default Dashboard
+};
+export default Dashboard;

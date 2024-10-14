@@ -6,13 +6,13 @@ import Login from "./components/Login";
 import ResetPassword from "./components/ResetPassword";
 import GeneralLayout from "./GeneralLayout";
 import Dashboard from "./components/Dashboard";
+import NewDashboard from "./components/NewDashboard";
 import { PersonalDetailsProvider } from "./components/context/PersonalDetailsContext";
 import PersonalDetailsForm from "./components/PersonalDetailsForm";
 import NotFound from "./components/NotFound";
 import ProfilePage from "./components/ProfilePage";
 import Jobs from "./components/Jobs";
 import Events from "./components/Events";
-
 
 function App() {
   const router = createBrowserRouter([
@@ -35,6 +35,10 @@ function App() {
         {
           path: "/dashboard",
           element: <Dashboard />,
+        },
+        {
+          path: "/newdashboard",
+          element: <NewDashboard />,
         },
         {
           path: "personalDetails",
@@ -65,7 +69,7 @@ function App() {
           element: <NotFound />,
         },
       ],
-    }
+    },
   ]);
 
   return (

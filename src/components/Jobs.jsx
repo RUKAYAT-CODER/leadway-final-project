@@ -99,6 +99,14 @@ const Jobs = () => {
                 Title
               </label>
             </div>
+            <div className="flex flex-col md:w-1/2">
+              <label htmlFor="experience" className="mb-2 font-medium">
+                Experience
+              </label>
+            </div>
+          </div>
+
+          <div className="flex flex-col md:flex-row md:space-x-4 mb-6">
             <div className="flex flex-col mb-4 md:mb-0 md:w-1/2">
               <input
                 type="text"
@@ -107,14 +115,6 @@ const Jobs = () => {
                 placeholder="Job Title"
                 className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#006d3e]"
               />
-            </div>
-          </div>
-
-          <div className="flex flex-col md:flex-row md:space-x-4 mb-6">
-            <div className="flex flex-col md:w-1/2">
-              <label htmlFor="experience" className="mb-2 font-medium">
-                Experience
-              </label>
             </div>
             <div className="flex flex-col md:w-1/2">
               <div className="relative">

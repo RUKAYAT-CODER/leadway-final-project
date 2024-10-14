@@ -14,12 +14,10 @@ const Events = () => {
   const [designationImage, setDesignationImage] = useState(null);
   const [eventStatus, setEventStatus] = useState('Confirmed');
 
-  // Handle adding more speakers
   const handleAddSpeaker = () => {
     setSpeakerCount(prevCount => prevCount + 1);
   };
 
-  // Handle event image uploads
   const handleImageUpload = (event) => {
     const files = event.target.files;
     if (files) {
@@ -68,21 +66,16 @@ const Events = () => {
     console.log('Form Submitted');
   };
 
-  // Handle clicking the hidden file input for event images
   const handleFileInputClick = () => {
     document.getElementById('eventImageInput').click();
   };
 
   return (
     <div className="p-6 bg-gray-100 min-h-screen">
-      {/* Form Title */}
       <h1 className="text-3xl font-bold mb-6">Create Events</h1>
       
-      {/* Form Container */}
       <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md">
-        {/* Row 1: Event Title and Speaker Name */}
         <div className="flex flex-col md:flex-row md:space-x-4 mb-6">
-          {/* Left Side: Event Title */}
           <div className="flex-1">
             <label htmlFor="eventTitle" className="block text-gray-700 font-medium mb-2">Event Title</label>
             <input 
@@ -94,8 +87,7 @@ const Events = () => {
               required
             />
           </div>
-          
-          {/* Right Side: Speaker Name */}
+        
           <div className="flex-1">
             <label htmlFor="speakerName" className="block text-gray-700 font-medium mb-2">Speaker Name</label>
             <input 
@@ -109,9 +101,7 @@ const Events = () => {
           </div>
         </div>
         
-        {/* Row 2: Event Details and Contact Information */}
         <div className="flex flex-col md:flex-row md:space-x-4 mb-6">
-          {/* Left Side: Event Details */}
           <div className="flex-1 mb-6 md:mb-0">
             <label htmlFor="eventDetails" className="block text-gray-700 font-medium mb-2">Event Details</label>
             <textarea 
@@ -123,9 +113,7 @@ const Events = () => {
             ></textarea>
           </div>
           
-          {/* Right Side: Email and Phone Number */}
           <div className="flex-1">
-            {/* Email */}
             <div className="mb-4">
               <label htmlFor="email" className="block text-gray-700 font-medium mb-2">Email</label>
               <input 
@@ -138,7 +126,6 @@ const Events = () => {
               />
             </div>
             
-            {/* Phone Number */}
             <div>
               <label htmlFor="phoneNumber" className="block text-gray-700 font-medium mb-2">Phone Number</label>
               <input 
@@ -153,13 +140,10 @@ const Events = () => {
           </div>
         </div>
         
-        {/* Row 3: Add Image and Designation */}
         <div className="flex flex-col md:flex-row md:space-x-4 mb-6">
-          {/* Left Side: Add Image */}
           <div className="flex-1 mb-6 md:mb-0">
             <label className="block text-gray-700 font-medium mb-2">Add Image</label>
             <div className="flex space-x-4">
-              {/* Image Box 1 */}
               <div className="w-32 h-32 border border-gray-300 rounded flex items-center justify-center">
                 {uploadedImages[0] ? (
                   <img src={uploadedImages[0].preview} alt={uploadedImages[0].name} className="w-full h-full object-cover rounded" />
@@ -277,14 +261,13 @@ const Events = () => {
             <button 
               type="button" 
               onClick={handleAddSpeaker} 
-              className="flex items-center bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors"
+              className="flex items-center bg-[#006d3e] text-white px-4 py-2 rounded hover:bg-[#018847] transition-colors"
             >
               <FiPlus className="mr-1" /> Add more speakers
             </button>
           </div>
         </div>
         
-        {/* Dynamic Speaker Fields */}
         {Array.from({ length: speakerCount }).map((_, index) => (
           <div key={index} className="flex flex-col md:flex-row md:space-x-4 mb-6">
             {/* Speaker Name */}

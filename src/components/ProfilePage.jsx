@@ -98,7 +98,9 @@ export const ProfilePage = () => {
     <div className="">
       <div className='flex flex-col mx-auto items-center justify-center mt-4 gap-2 max-w-[500px] bg-lime-800 drop-shadow-md rounded text-white'>
         <h1 classname='font-bold text-[36px] m-4'>Welcome ! {user.name}</h1>
-        <div>{user.image}</div>
+        <div>
+          <img src={user.image} alt="user" />
+        </div>
         <h1 className='font-bold text-[20px] m-3'>Name: {user.name}</h1>
         <p className='font-bold'>Title: {user.title}</p>
         <p className='font-bold m-2'>Email: {user.email}</p>

@@ -3,7 +3,6 @@
 import React from "react";
 import {
   IoMdClose,
-  IoMdHome,
   IoIosPeople,
   IoMdSettings,
   IoMdLogOut,
@@ -11,6 +10,7 @@ import {
   IoMdPerson,
   IoIosCalendar,
   IoMdOptions,
+  IoMdApps,
 } from "react-icons/io";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/Teach-for-Nigeria-logo.svg"; // Ensure correct path
@@ -18,7 +18,7 @@ import Logo from "../assets/Teach-for-Nigeria-logo.svg"; // Ensure correct path
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   const top_links = [
-    { label: "Dashboard", to: "/dashboard", icon: <IoMdHome /> },
+    { label: "Dashboard", to: "/dashboard", icon: <IoMdApps /> },
     { label: "Profile", to: "/personalDetails", icon: <IoMdPerson /> },
     { label: "Directory", to: "/directory", icon: <IoMdOptions /> },
     { label: "Forum", to: "/forum", icon: <IoIosPeople /> },
