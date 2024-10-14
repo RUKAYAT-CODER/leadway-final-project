@@ -1,4 +1,3 @@
-// src/pages/CreateEventsPage.jsx
 
 import React, { useState } from 'react';
 import { 
@@ -32,9 +31,9 @@ const Events = () => {
   };
 
   // Handle removal of event images
-  const handleRemoveImage = (id) => {
-    setUploadedImages(prevImages => prevImages.filter(image => image.id !== id));
-  };
+  // const handleRemoveImage = (id) => {
+  //   setUploadedImages(prevImages => prevImages.filter(image => image.id !== id));
+  // };
 
   // Handle designation image upload
   const handleDesignationImageUpload = (event) => {
