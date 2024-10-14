@@ -23,7 +23,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     { label: "Directory", to: "/directory", icon: <IoMdOptions /> },
     { label: "Forum", to: "/forum", icon: <IoIosPeople /> },
     { label: "Events", to: "/events", icon: <IoIosCalendar /> },
-    { label: "Jobs", to: "/job", icon: <IoIosBriefcase /> },
+    { label: "Jobs", to: "/jobs", icon: <IoIosBriefcase /> },
     { label: "Settings", to: "/settings", icon: <IoMdSettings /> },
     { label: "Log out", to: "/logout", icon: <IoMdLogOut /> },
   ];

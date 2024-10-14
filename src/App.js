@@ -10,6 +10,9 @@ import { PersonalDetailsProvider } from "./components/context/PersonalDetailsCon
 import PersonalDetailsForm from "./components/PersonalDetailsForm";
 import NotFound from "./components/NotFound";
 import ProfilePage from "./components/ProfilePage";
+import Jobs from "./components/Jobs";
+import Events from "./components/Events";
+
 
 function App() {
   const router = createBrowserRouter([
@@ -27,15 +30,14 @@ function App() {
       element: <ResetPassword />,
     },
     {
-      // path: "/dashboard",
       element: <GeneralLayout />,
       children: [
         {
-          path: "/dashboard", // This corresponds to /dashboard
+          path: "/dashboard",
           element: <Dashboard />,
         },
         {
-          path: "personalDetails", // This corresponds to /dashboard/profile
+          path: "personalDetails",
           element: <PersonalDetailsForm />,
         },
         {
@@ -43,17 +45,27 @@ function App() {
           element: <Directory />,
         },
         {
+          path: "/jobs",
+          element: <Jobs />,
+        },
+        {
+          path: "/events",
+          element: <Events />,
+        },
+        {
           path: "/directory/profilePage/:userId",
           element: <ProfilePage />,
         },
         {
           path: "*",
-          element: <NotFound />, // Create a NotFound component
+          element: <NotFound />,
         },
-        // You can add more nested routes here
+        {
+          path: "/not-found",
+          element: <NotFound />,
+        },
       ],
-    },
-    // You can add more top-level routes here
+    }
   ]);
 
   return (
