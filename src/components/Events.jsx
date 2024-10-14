@@ -1,10 +1,10 @@
 
 import React, { useState } from 'react';
-import { 
-  FiPlus, 
-  FiUpload, 
-  FiArrowRight, 
-  FiTrash2 
+import {
+  FiPlus,
+  FiUpload,
+  FiArrowRight,
+  FiTrash2
 } from 'react-icons/fi';
 
 const Events = () => {
