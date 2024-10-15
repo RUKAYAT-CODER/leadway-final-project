@@ -1,0 +1,33 @@
+import React from 'react'
+import {useNavigate} from 'react'
+
+const LogOut = ( ) =>{
+  const navigate = useNavigate()
+
+  const handleNavigate = () => {
+    navigate('/')
+  }
+   const handleCancel= () => {
+    navigate(-1)
+  }
+
+  return (
+    <div className="flex items-center, justify-center bg-white rounded-lg shadow-md  p-4">
+      <div>
+        <h2 className="text-[#006d3e] font-bold text-center my-3">Log Out</h2>
+        <p>
+          Are you sure you want to <span className="font-bold">Log Out</span>{" "}
+          from this page.
+        </p>
+        <button
+          onClick={handleNavigate}
+          className="button bg-[#01884F] text-white text-[18px] text-bold py-4 rounded-lg mt-7 mb-20"
+        >
+          Log out
+        </button>
+        <button onClick={handleCancel}>Cancel</button>
+      </div>
+    </div>
+  );
+}
+export default LogOut

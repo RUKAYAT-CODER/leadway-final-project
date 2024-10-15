@@ -33,7 +33,7 @@ const ForgotPassword = () => {
     <div className="flex flex-col w-full lg:flex-row-reverse lg:w-full lg:h-screen gap-0">
       <div className="bg-hero-pattern bg-no-repeat bg-cover h-[400px] p-5 rounded-2xl w-full md:h-[500px] lg:w-[45%] gap-0 lg:h-screen lg:border-t-r-2 lg:border-b-r-2 lg:border-l-t-0 lg:border-b-l-0 lg:shadow-sm lg:p-4 lg:-ml-4">
         <img src={TeachForNigeria} alt="Logo" className="w-1/2 lg:-mt-40" />
-        <h1 className="text-white font-bold text-center text-4xl mb-7 mt-10  lg:mt-96 lg:text-5xl">
+        <h1 className="text-white font-bold text-center text-4xl mb-7 mt-10  lg:mt-[120px] lg:text-5xl">
           Welcome to the Community
         </h1>
         <p className="text-white font-bold text-center">
@@ -54,10 +54,10 @@ const ForgotPassword = () => {
               alt="Logo"
               className="hidden lg:block lg:w-1/4  "
             />
-            <h2 className="text-[#01884F] font-bold text-lg text-center py-6 lg:text-[30px] lg:mt-24">
+            <h2 className="text-[#01884F] font-bold text-lg text-center py-6 lg:text-[30px] lg:mt-[150px]">
               Password Reset
             </h2>
-          <div className='flex items-center'>
+          <div className='flex items-center justify-center'>
             <OTPInput />
           </div>
            
@@ -74,9 +74,9 @@ const ForgotPassword = () => {
           </Form>
         )}
       </Formik>
-      <div className="absolute bottom-30 left-20 z-40 flex">
+      <div className="flex items-center absolute left-40 bottom-40 md:">
         <img src={LeftArrow} alt="back arrow" className="w-4 h-4 mr-5" />
-        <Link to="/login" className="text-[#01884f]">
+        <Link to="/login" className="text-red-500">
           Back to sign in
         </Link>
       </div>

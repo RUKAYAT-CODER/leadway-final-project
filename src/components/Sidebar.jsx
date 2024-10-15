@@ -4,7 +4,7 @@ import React from "react";
 import {
   IoMdClose,
   IoIosPeople,
-  IoMdSettings,
+  // IoMdSettings,
   IoMdLogOut,
   IoIosBriefcase,
   IoMdPerson,
@@ -24,7 +24,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     { label: "Forum", to: "/forum", icon: <IoIosPeople /> },
     { label: "Events", to: "/events", icon: <IoIosCalendar /> },
     { label: "Jobs", to: "/jobs", icon: <IoIosBriefcase /> },
-    { label: "Settings", to: "/settings", icon: <IoMdSettings /> },
+    // { label: "Settings", to: "/settings", icon: <IoMdSettings /> },
     { label: "Log out", to: "/logout", icon: <IoMdLogOut /> },
   ];
 
