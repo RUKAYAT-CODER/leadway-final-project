@@ -1,18 +1,19 @@
 import React from 'react'
 import ProfileLady from "../assets/profile-pix-lady.svg";
 import LoveIcon from '../assets/LoveIcon-red.svg'
-import Savedcon from '../assets/SavedBtn-blue.svg'
+import SavedIcon from '../assets/SavedBtn-blue.svg'
+import MessageIcon from '../assets/iconMessage.svg'
 
 const Forum = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-[#2c4c3d] border border-b-2 border-zinc-800">
       <div>
-        <p className="text-gray-400">
+        <p className="text-gray-400 my-2">
           Start a discussion or question related to alumini, career, business or
           freeelancing
         </p>
         <div></div>
-        <div className="flex items center justify-between">
+        <div className="flex items center justify-between bg-white ronded shadow-md">
           <div>
             <span>Recent Thread</span>
             <span className="text-gray-400">Popular This Week </span>
@@ -26,7 +27,7 @@ const Forum = () => {
               <img src={ProfileLady} alt="user" className="w-6" />
             </div>
             <div>
-              <p className="font-bold text-[18px]">What Do You Think About OpenChat GPT?</p>
+              <p className="font-bold text-[18px] my-3">What Do You Think About OpenChat GPT?</p>
               <p className="text-[#006d3e]">
                 Sam Larry{" "}
                 <span className="text-zinc-400">
@@ -40,11 +41,11 @@ const Forum = () => {
             </div>
           </div>
           <div>
-            <p>The chatbot, which interactsin a conversational way, also answers follo-up questions, admits mistakes, challenges incorrect premisesand rejects inappropriate requests.</p>
-            <div>
-            <div> <img src={LoveIcon} alt="icons" /></div>
-            <div> <img src={SavedIconn} alt="icons" /></div>
-            <div> <img src={SavedIconn} alt="icons" /></div>
+            <p className='my-2'>The chatbot, which interactsin a conversational way, also answers follo-up questions, admits mistakes, challenges incorrect premisesand rejects inappropriate requests.</p>
+            <div classname='flex items-center gap-2'>
+            <div> <img src={LoveIcon} alt="icons" /> <span>10</span></div>
+            <div> <img src={SavedIcon} alt="icons" /> <span>2</span></div>
+            <div> <img src={MessageIcon} alt="icons" /> <span>5</span></div>
              
             </div>
           </div>
