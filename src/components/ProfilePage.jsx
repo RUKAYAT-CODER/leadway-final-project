@@ -112,7 +112,7 @@ export const ProfilePage = () => {
         <p className="font-bold mb-4">Address: {user.address}</p>
         <button
           onClick={handleNavigate}
-          className=" bg-white border-neutral-700 text-lime-800 text-[18px] font-bold py-4 rounded-lg mt-7 mb-20"
+          className=" bg-white border-neutral-700 text-lime-800 text-[18px] font-bold py-4 mx-4 rounded-lg mt-7 mb-20"
         >
           Back
         </button>
