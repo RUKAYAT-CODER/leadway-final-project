@@ -5,8 +5,12 @@ import TomiwaSmith from "../assets/picture2.svg";
 import IsahFareda from "../assets/picture3.svg";
 import IsahFarda from "../assets/picture4.svg";
 import IsahFareeda from "../assets/picture5.svg";
+import { useNavigate } from "react-router-dom";
 
-
+const navigate = useNavigate()
+ const handleNavigate = () => {
+   navigate("/directory");
+ };
 export const ProfilePage = () => {
   const {userId} = useParams()
   console.log(userId)
@@ -96,15 +100,21 @@ export const ProfilePage = () => {
   
   return (
     <div className="">
-      <div className='flex flex-col mx-auto items-center justify-center mt-4 gap-2 max-w-[500px] bg-lime-800 drop-shadow-md rounded text-white'>
-        <h1 classname='font-bold text-[36px] m-4'>Welcome ! {user.name}</h1>
+      <div className="flex flex-col mx-auto items-center justify-center mt-4 gap-2 max-w-[500px] bg-lime-800 drop-shadow-md rounded text-white">
+        <h1 classname="font-bold text-[36px] m-4">Welcome ! {user.name}</h1>
         <div>
           <img src={user.image} alt="user" />
         </div>
-        <h1 className='font-bold text-[20px] m-3'>Name: {user.name}</h1>
-        <p className='font-bold'>Title: {user.title}</p>
-        <p className='font-bold m-2'>Email: {user.email}</p>
-        <p className='font-bold mb-4'>Address: {user.address}</p>
+        <h1 className="font-bold text-[20px] m-3">Name: {user.name}</h1>
+        <p className="font-bold">Title: {user.title}</p>
+        <p className="font-bold m-2">Email: {user.email}</p>
+        <p className="font-bold mb-4">Address: {user.address}</p>
+        <button
+          onClick={handleNavigate}
+          className="button bg-[#01884F] text-white text-[18px] font-bold py-4 rounded-lg mt-7 mb-20"
+        >
+          Back
+        </button>
       </div>
     </div>
   );

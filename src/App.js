@@ -12,6 +12,7 @@ import PersonalDetailsForm from "./components/PersonalDetailsForm";
 import NotFound from "./components/NotFound";
 import ProfilePage from "./components/ProfilePage";
 import Jobs from "./components/Jobs";
+import Forum from "./components/Forum";
 import Events from "./components/Events";
 import LogOut from "./components/LogOut";
 import ForgotPassword from "./components/ForgotPassword";
@@ -59,6 +60,10 @@ function App() {
           element: <Jobs />,
         },
         {
+          path: "/forum",
+          element: <Forum />,
+        },
+        {
           path: "/events",
           element: <Events />,
         },
@@ -66,7 +71,7 @@ function App() {
           path: "/directory/profilePage/:userId",
           element: <ProfilePage />,
         },
-         {
+        {
           path: "/logout",
           element: <LogOut />,
         },

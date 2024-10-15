@@ -1,5 +1,5 @@
 import React from 'react'
-import {useNavigate} from 'react'
+import {useNavigate} from 'react-router-dom'
 
 const LogOut = ( ) =>{
   const navigate = useNavigate()
@@ -12,7 +12,7 @@ const LogOut = ( ) =>{
   }
 
   return (
-    <div className="flex items-center, justify-center bg-white rounded-lg shadow-md  p-4">
+    <div className="flex items-center justify-center bg-white rounded-lg shadow-md  p-4">
       <div>
         <h2 className="text-[#006d3e] font-bold text-center my-3">Log Out</h2>
         <p>
@@ -21,11 +21,16 @@ const LogOut = ( ) =>{
         </p>
         <button
           onClick={handleNavigate}
-          className="button bg-[#01884F] text-white text-[18px] text-bold py-4 rounded-lg mt-7 mb-20"
+          className="button bg-[#01884F] text-white text-[18px] font-bold py-4 rounded-lg mt-7 mb-20"
         >
           Log out
         </button>
-        <button onClick={handleCancel}>Cancel</button>
+        <button
+          onClick={handleCancel}
+          className="button bg-white text-[#006d3e] text-[18px] font-bold py-4 rounded-lg mt-7 mb-20 border"
+        >
+          Cancel
+        </button>
       </div>
     </div>
   );
