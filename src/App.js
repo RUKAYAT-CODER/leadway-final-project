@@ -13,6 +13,7 @@ import NotFound from "./components/NotFound";
 import ProfilePage from "./components/ProfilePage";
 import Jobs from "./components/Jobs";
 import Events from "./components/Events";
+import LogOut from "./components/LogOut";
 import ForgotPassword from "./components/ForgotPassword";
 
 function App() {
@@ -64,6 +65,10 @@ function App() {
         {
           path: "/directory/profilePage/:userId",
           element: <ProfilePage />,
+        },
+         {
+          path: "/logout",
+          element: <LogOut />,
         },
         {
           path: "*",

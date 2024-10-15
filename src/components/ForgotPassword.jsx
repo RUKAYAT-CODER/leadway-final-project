@@ -34,7 +34,7 @@ const ForgotPassword = () => {
 
   return (
     <div className="flex flex-col w-full lg:flex-row-reverse lg:w-full lg:h-screen gap-0">
-      <div className="bg-hero-pattern bg-no-repeat bg-cover h-[400px] p-5 rounded-2xl w-full md:h-[500px] lg:w-[45%] gap-0 lg:h-screen lg:border-t-r-2 lg:border-b-r-2 lg:border-l-t-0 lg:border-b-l-0 lg:shadow-sm lg:p-4 lg:-ml-4">
+      <div className="bg-hero-pattern bg-no-repeat bg-cover h-[400px] p-5 rounded-2xl w-full md:h-[520px] lg:w-[45%] gap-0 lg:h-screen lg:border-t-r-2 lg:border-b-r-2 lg:border-l-t-0 lg:border-b-l-0 lg:shadow-sm lg:p-4 lg:-ml-4">
         <img src={TeachForNigeria} alt="Logo" className="w-1/2 lg:-mt-40" />
         <h1 className="text-white font-bold text-center text-4xl mb-7 mt-10  lg:mt-96 lg:text-5xl">
           Welcome to the Community
