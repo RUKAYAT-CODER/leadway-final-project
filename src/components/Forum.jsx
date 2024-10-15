@@ -12,7 +12,7 @@ const Forum = () => {
           Start a discussion or question related to alumini, career, business or
           freeelancing
         </p>
-        <div></div>
+        
         <div className="flex items-center justify-between bg-white ronded shadow-md">
           <div className="flex items-center">
             <span>Recent Thread</span>
@@ -31,12 +31,12 @@ const Forum = () => {
                 What Do You Think About OpenChat GPT?
               </p>
               <p className="text-[#006d3e]">
-                Sam Larry{" "}
+                Sam Larry
                 <span className="text-zinc-400">
-                  {" "}
+                  
                   <div className="rounded-full border bg-zinc-400 w-2 h-2"></div>
                   30 mins ago
-                </span>{" "}
+                </span>
                 <div className="rounded-full border bg-zinc-400 w-2 h-2"></div>
                 in Technology
               </p>
