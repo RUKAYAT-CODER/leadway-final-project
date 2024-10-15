@@ -2,7 +2,7 @@
 import LeftArrow from "../assets/arrow-left.svg";
 import React, { useContext } from "react";
 import PersonalDetailsContext from "./context/PersonalDetailsContext";
-import ProfileLady from "../assets/profile-pix-lady.svg";
+// import ProfileLady from "../assets/profile-pix-lady.svg";
 import FormGroup from "../ui/FormGroup"
 
 const PersonalDetailsForm = () => {
@@ -19,12 +19,12 @@ const PersonalDetailsForm = () => {
     <div className="p-4">
       {/* Profile Header */}
       <div className="flex gap-3 mb-4 items-center">
-        <div>
-          <img src={ProfileLady} alt="user" className="w-14" />
-        </div>
+        // <div>
+        //   <img src={ProfileLady} alt="user" className="w-14" />
+        // </div>
         <div>
           <p className="font-bold">Profile</p>
-          <p>Update your photo and Personal data</p>
+          <p>Update your Personal data</p>
         </div>
       </div>
 

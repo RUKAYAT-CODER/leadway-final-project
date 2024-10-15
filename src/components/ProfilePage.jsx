@@ -7,13 +7,14 @@ import IsahFarda from "../assets/picture4.svg";
 import IsahFareeda from "../assets/picture5.svg";
 import { useNavigate } from "react-router-dom";
 
-const navigate = useNavigate()
- const handleNavigate = () => {
-   navigate("/directory");
- };
+
 export const ProfilePage = () => {
   const {userId} = useParams()
   console.log(userId)
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/directory");
+  };
   const users = [
     {
       id: 1,
